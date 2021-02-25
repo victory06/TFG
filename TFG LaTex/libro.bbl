@@ -1,0 +1,26 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{MG{\etalchar{+}}16}
+
+\bibitem[GBC16]{Goodfellow-et-al-2016}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem[JM15]{jordan2015machine}
+Michael~I Jordan and Tom~M Mitchell.
+\newblock Machine learning: Trends, perspectives, and prospects.
+\newblock {\em Science}, 349(6245):255--260, 2015.
+
+\bibitem[MG{\etalchar{+}}16]{muller2016introduction}
+Andreas~C M{\"u}ller, Sarah Guido, et~al.
+\newblock {\em Introduction to machine learning with Python: a guide for data
+  scientists}.
+\newblock " O'Reilly Media, Inc.", 2016.
+
+\bibitem[Nil09]{nilsson2009quest}
+Nils~J Nilsson.
+\newblock {\em The quest for artificial intelligence}.
+\newblock Cambridge University Press, 2009.
+
+\end{thebibliography}
