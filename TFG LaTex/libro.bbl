@@ -1,0 +1,106 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{AMMIL12}
+
+\bibitem[AMMIL12]{abu2012learning}
+Yaser~S Abu-Mostafa, Malik Magdon-Ismail, and Hsuan-Tien Lin.
+\newblock {\em Learning from data}, volume~4.
+\newblock AMLBook New York, NY, USA:, 2012.
+
+\bibitem[CCT{\etalchar{+}}15]{inproceedings}
+Kittipong Chomboon, Pasapitch Chujai, Pongsakorn Teerarassammee, Kittisak
+  Kerdprasop, and Nittaya Kerdprasop.
+\newblock An empirical study of distance metrics for k-nearest neighbor
+  algorithm.
+\newblock pages 280--285, 01 2015.
+
+\bibitem[CD07]{padraiddelany2007k}
+Padraig Cunningham and Sarah Delany.
+\newblock k-nearest neighbour classifiers.
+\newblock {\em Mult Classif Syst}, 04 2007.
+
+\bibitem[GBC16]{Goodfellow-et-al-2016}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem[GJJJ02]{garthwaite2002statistical}
+Paul~H Garthwaite, Ian~T Jolliffe, IT~Jolliffe, and Byron Jones.
+\newblock {\em Statistical inference}.
+\newblock Oxford University Press on Demand, 2002.
+
+\bibitem[HNL{\etalchar{+}}19]{hyde2019applications}
+Kayleigh~K Hyde, Marlena~N Novack, Nicholas LaHaye, Chelsea Parlett-Pelleriti,
+  Raymond Anden, Dennis~R Dixon, and Erik Linstead.
+\newblock Applications of supervised machine learning in autism spectrum
+  disorder research: a review.
+\newblock {\em Review Journal of Autism and Developmental Disorders},
+  6(2):128--146, 2019.
+
+\bibitem[Hun07]{Hunter:2007}
+J.~D. Hunter.
+\newblock Matplotlib: A 2d graphics environment.
+\newblock {\em Computing in Science \& Engineering}, 9(3):90--95, 2007.
+
+\bibitem[JM15]{jordan2015machine}
+Michael~I Jordan and Tom~M Mitchell.
+\newblock Machine learning: Trends, perspectives, and prospects.
+\newblock {\em Science}, 349(6245):255--260, 2015.
+
+\bibitem[JOP{\etalchar{+}}  ]{scipy}
+Eric Jones, Travis Oliphant, Pearu Peterson, et~al.
+\newblock {SciPy}: Open source scientific tools for {Python}, 2001--.
+
+\bibitem[MG{\etalchar{+}}16]{muller2016introduction}
+Andreas~C M{\"u}ller, Sarah Guido, et~al.
+\newblock {\em Introduction to machine learning with Python: a guide for data
+  scientists}.
+\newblock " O'Reilly Media, Inc.", 2016.
+
+\bibitem[Nil09]{nilsson2009quest}
+Nils~J Nilsson.
+\newblock {\em The quest for artificial intelligence}.
+\newblock Cambridge University Press, 2009.
+
+\bibitem[Pet09]{peterson2009k}
+Leif~E Peterson.
+\newblock K-nearest neighbor.
+\newblock {\em Scholarpedia}, 4(2):1883, 2009.
+
+\bibitem[PVG{\etalchar{+}}11]{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
+
+\bibitem[SKC07]{su2007single}
+Shih-Chieh Su, C-C~Jay Kuo, and Ting Chen.
+\newblock Single nucleotide polymorphism data analysis-state-of-the-art review
+  on this emerging field from a signal processing viewpoint.
+\newblock {\em IEEE Signal Processing Magazine}, 24(1):75--82, 2007.
+
+\bibitem[SL21a]{scikit2021dt}
+Scikit-Learn.
+\newblock {Decision Tree Classifier}, 2021.
+
+\bibitem[SL21b]{scikit2021knn}
+Scikit-Learn.
+\newblock {K Nearest Neighbors Classifier Python Implementation}, 2021.
+
+\bibitem[SL21c]{scikit2021lr}
+Scikit-Learn.
+\newblock {Logistic Regression Classifier}, 2021.
+
+\bibitem[SL21d]{scikit2021metrics}
+Scikit-Learn.
+\newblock {Metrics}, 2021.
+
+\bibitem[WM10]{mckinney-proc-scipy-2010}
+{W}es {M}c{K}inney.
+\newblock {D}ata {S}tructures for {S}tatistical {C}omputing in {P}ython.
+\newblock In {S}t\'efan van~der {W}alt and {J}arrod {M}illman, editors, {\em
+  {P}roceedings of the 9th {P}ython in {S}cience {C}onference}, pages 56 -- 61,
+  2010.
+
+\end{thebibliography}
