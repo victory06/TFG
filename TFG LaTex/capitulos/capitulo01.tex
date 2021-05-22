@@ -1,0 +1,79 @@
+% !TeX root = ../libro.tex
+% !TeX encoding = utf8
+
+\chapter{Inferencia estadística y estadística empleada}
+En este primer capítulo se va a exponer, justificar y demostrar la inferencia estadística y la estadística empleada en el capítulo de explicación teórica de los modelos \autoref{ch:machine-learning} y en los tests de contraste de hipótesis usados.\\
+\section{Estimadores máximo verosímiles}\label{st:emv}
+Sea $X_{1},...,X_{n}$ muestras independientes e idénticamente distribuidas de una población con función masa de probabilidad o función de densidad $f(x \vert \theta_{1},...,\theta_{k})$, la función de verosimilitud se define como
+\[ L(\theta \vert x)=L(\theta_{1},...,\theta_{k} \vert x_{1},...,x_{n})=\prod_{i=1}^{n} f(x_{1} \vert \theta_{1},...,\theta_{k}) \]
+\begin{definicion}
+Para cada realización muestral x, sea $\hat{\theta}(x)$ un valor paramétrico donde $L(\theta \vert x)$ alcanza su máximo como función de $\theta$, con x fija. Un \textbf{\textit{Estimador Máximo Verosímil}} (EMV) del parámetro $\theta$ basado en la muestra X es $\hat{\theta}(x)$. \cite{garthwaite2002statistical} \end{definicion}
+Por la forma en la que está construído, el EMV coincide en rango con el parámetro $\theta$.\\
+Una propiedad muy útil de los estimadores máximo verosímiles es lo que se conoce como \textit{propiedad de invarianza de los estimadores máximo verosímiles}, que viene a decir, informalmente, que si tenemos una distribución dependiente de un parámetro $\theta$ pero nos interesa encontrar una estimación de alguna función suya, $\tau(\theta)$ se puede encontrar el EMV de $\theta$, $\hat{\theta}$, y el EMV de $\tau(\theta)$ será $\tau(\hat{\theta})$. Hay, sin embargo, algunos problemas técnicos antes de formalizar la noción de invarianza de los EMV. Si la asignación $\theta \rightarrow \tau(\theta)$ es uno a uno (para cada valor de $\theta$ hay un único valor de $\tau(\theta)$), no hay problema pues si tomamos $\eta = \tau(\theta)$, entonces la inversa de la función $\tau^{-1}(\eta)=\theta$ está bien definida y la función de verosimilitud de $\tau(\theta)$ se escribe en función de $\eta$ dada por: \[ L^{*}(\eta \vert x) = \prod_{i=1}^{n}f(x_{i} \vert \tau^{-1}(\eta)) = L(\tau^{-1}(\eta) \vert x) \]
+y
+\[ \sup_{\eta}L^{*}(\eta \vert x) = \sup_{\eta}L(\tau^{-1}(\eta) \vert x) = \sup_{\theta}L(\theta \vert x) \]
+Así, el máximo de $L^{*}(\eta \vert x) $ es alcanzado en $\eta = \tau(\theta) = \tau(\hat{\theta})$ mostrando que el EMV de $\tau(\theta)$ es $\tau(\hat{\theta})$.\\
+Ahora bien, si la asignación no es uno a uno, necesitamos una definición más general de  la función de verosimilitud $\tau(\\theta)$ y un teorema más general, pues para un valor dado $\eta$ puede haber más de un valor $\theta$ que satisfaga $\tau(\\theta) = \eta$.\\
+Para ello, usamos para $\tau(\theta)$ la \textit{función de verosimilitud inducida} dada por \[ L^{*}(\eta \vert x) = \sup_{\lbrace \theta:\tau(\theta)=\eta \rbrace} L(\theta \vert x) \]
+\begin{teorema}
+\textbf{(Invarianza de los EMV)} Si $\hat{\theta}$ es el EMV de $\theta$  entonces para cualquier función $\tau(\theta)$ el EMV de $\tau(\theta)$ es $\tau(\hat{\theta})$
+\end{teorema}
+\begin{proof}
+Sea $\hat{\eta}$ el valor que maximiza $L^{*}(\eta \vert x)$. Debemos probar que $L^{*}(\hat{\eta} \vert x) = L^{*}(\tau(\theta) \vert x)$. Ahora, como se puede deducir de la fórmula anterior, el máximo de $L$ y $L^{*}$ coinciden así que tenemos: 
+\[ L^{*}(\hat{\eta} \vert x) = \sup_{\eta} \sup_{\lbrace \theta:\tau(\theta)=\eta \rbrace} L(\theta \vert x)= \quad \quad \textnormal{ (definición de } L^{*} \textnormal{)} \]
+\[ =\sup_{\theta}L(\theta \vert x) = \quad \quad \quad \quad \]
+\[\quad \quad \quad \quad  = L(\hat{\theta} \vert x) \quad \quad \quad \textnormal{(definición de } \hat{\theta} \textnormal{)} \]
+donde la segunda igualdad se da ya que la maximización iterada es igual que la maximización sin condiciones sobre $\theta$, que es alcanzada en $\hat{\theta}$. Además
+\[ L(\theta \vert x) = \sup_{\lbrace \theta:\tau(\theta)=\tau(\hat{\theta}) \rbrace} L(\theta \vert x)= \quad \quad \textnormal{(} \hat{\theta} \textnormal{ es el EMV)} \]
+\[ =L^{*}(\tau(\hat{\theta}) \vert x) \quad \quad \textnormal{(definición de } L^{*} \textnormal{)} \]
+Por lo que la cadena de igualdades muestra que $L^{*}(\hat{\eta} \vert x) = L^{*}(\tau(\theta) \vert x)$ y que $\tau(\hat{\theta})$ es el EMV de $\tau(\theta)$.
+\end{proof}
+Este teorema tampoco excluye la posibilidad de que $\theta$ sea un vector: si el EMV de $\theta=(\theta_{1},...,\theta_{k})$ es $\hat{\theta}=(\hat{\theta_{1}},...,\hat{\theta_{k}})$ entonces para cualquier función $\tau$ del vector, el EMV de $\tau(\theta_{1},...,\theta_{k})$ es $\tau(\hat{\theta_{1}},...,\hat{\theta_{k}})$. \cite{garthwaite2002statistical}
+\section{Desigualdad de Chebyshev}\label{st:Cheby}
+Antes de probarla, necesitamos probar la siguiente proposición.
+\begin{proposicion}
+\textbf{Desigualdad de Markov}. Para una variable aleatoria $X$ y un número real $a>0$,
+\[ P(\vert X \vert \geq a) \leq \frac{E \left[ \vert X \vert \right]}{a} \]
+\end{proposicion}
+\begin{proof}
+Para todo $a>0$, $aI_{[ \vert X \vert  \geq a]}(X) \leq \vert X \vert$, así que se tiene que $E[aI_{[ \vert X \vert  \geq a]}] \leq E[\vert X \vert]$ y por las propedades de la esperanza, tenemos:
+\[ E[aI_{[ \vert X \vert  \geq a]}] = aE[I_{[ \vert X \vert  \geq a]}] = aP(\vert X \vert \geq a) \] y tenemos así que
+\[ aP(\vert X \vert \geq a) \leq E \left[ \vert X \vert \right] \]
+y se puede despejar la a pues es mayor que 0, concluyendo la demostración.
+\end{proof}
+Ahora sí estamos en condiciones de probar la desigualdad de Chebyshev.
+\begin{proposicion}
+\textbf{Desigualdad de Chebyshev}. Para una variable aleatoria $X$ y $a>0$,
+\[ P(\vert X - E[X] \vert \geq a) \leq \frac{Var[X]}{a^{2}} \]
+\end{proposicion}
+\begin{proof}
+Escribimos como $U$ a la variable aleatoria $(X - E[X])^{2}$. La desigualdad de Markov nos dice que, para $w>0$, $P(\vert U \vert \geq w) \leq \frac{E[\vert U \vert]}{w}$.\\
+Si establecemos $w=a^{2}$, $P(\vert U \vert \geq w) = P(\vert X-E[X] \vert \geq a)$ y tenemos que:
+\[ P(\vert X-E[X] \vert \geq a) \leq \frac{E[\vert U \vert]}{w}= \frac{Var[X]}{a^{2}} \]
+\end{proof}
+
+\cite{forsyth2018probability}
+\endinput
+%------------------------------------------------------------------------------------
+% FIN DEL CAPÍTULO. 
+%------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

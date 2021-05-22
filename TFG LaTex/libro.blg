@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: libro.aux
+The style file: alpha.bst
+Database file #1: library.bib
+Warning--entry type for "VCboundRNowak" isn't style-file defined
+--line 35 of file library.bib
+Warning--entry type for "scikit2021knn" isn't style-file defined
+--line 52 of file library.bib
+Warning--entry type for "scikit2021lr" isn't style-file defined
+--line 60 of file library.bib
+Warning--entry type for "scikit2021dt" isn't style-file defined
+--line 92 of file library.bib
+Warning--entry type for "scikit2021metrics" isn't style-file defined
+--line 100 of file library.bib
+Warning--empty booktitle in inproceedings
+You've used 21 entries,
+            2543 wiz_defined-function locations,
+            667 strings with 7480 characters,
+and the built_in function-call counts, 8148 in all, are:
+= -- 752
+> -- 458
+< -- 13
++ -- 164
+- -- 159
+* -- 578
+:= -- 1369
+add.period$ -- 58
+call.type$ -- 21
+change.case$ -- 138
+chr.to.int$ -- 18
+cite$ -- 22
+duplicate$ -- 308
+empty$ -- 582
+format.name$ -- 180
+if$ -- 1634
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 21
+newline$ -- 104
+num.names$ -- 65
+pop$ -- 175
+preamble$ -- 1
+purify$ -- 165
+quote$ -- 0
+skip$ -- 272
+stack$ -- 0
+substring$ -- 336
+swap$ -- 41
+text.length$ -- 13
+text.prefix$ -- 5
+top$ -- 0
+type$ -- 144
+warning$ -- 1
+while$ -- 69
+width$ -- 25
+write$ -- 253
+(There were 6 warnings)
