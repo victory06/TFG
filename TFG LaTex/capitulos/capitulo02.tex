@@ -1,0 +1,268 @@
+% !TeX root = ../libro.tex
+% !TeX encoding = utf8
+
+\chapter{Estadística Multivariante empleada}\label{Multivariante}
+\section{Primeras nociones}
+Rescatamos el concepto de \textbf{distribución conjunta} del capítulo anterior que se define involucrando la función de distribución:
+\[ R(x,y)=P(X \leq x, Y \leq y) \]
+para todo par de números reales $(x,y)$. Nos interesan en concreto los casos donde $F$ es absolutamente continua, lo que quiere decir que la derivada parcial siguiente existe casi en todas partes (c.t.p.) (es decir no existe para un conjunto de medida nula):
+\[ \frac{\partial^{2} F(x,y)}{\partial x \partial y}=f(x,y) \]
+y 
+\[ F(x,y) = \int_{-\infty}^{y} \int_{-\infty}^{x} f(u,v) du dv   \]
+donde $f$ indica la \textbf{función de densidad}.\\
+Estas definiciones pueden extrapolarse al caso de $p$ variables aleatorias $X_{1},X_{2},...,X_{p}$. La función de distribución es
+\[ F(x_{1},...,x_{p})=P(X_{1} \leq x_{1},...,X_{p} \leq x_{p}) \]
+para cualquier conjunto de números reales $x_{1},...,x_{p}$. La función de densidad absolutamente continua (c.t.p.) es
+\[ \frac{\partial^{p} F(x_{1},...,x_{p}}{\partial x_{1},...,\partial x_{p}} \]
+y 
+\[ F(x_{1},...,x_{p})= \int_{-\infty}^{x_{p}} \dotsb \int_{-\infty}^{x_{1}} f(u_{1},...,u_{p})du_{1} \dotsb du_{p} \]
+Los \textbf{momentos conjuntos} se definen como
+\[ \mathcal{E} X_{1}^{h_{1}} \dotsb X_{p}^{h_{p}} = \int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} x_{1}^{h_{1}} \dotsb x_{p}^{h_{p}} f(x_{1},...,x_{p})dx_{1} \dotsb dx_{p} \]
+La \textbf{distribución marginal} de $r$ variables aleatorias con $r<p$ es:
+\[ P(X_{1} \leq x_{1},...,X_{r} \leq x_{r})= P(X_{1} \leq x_{1},...,X_{r} \leq x_{r}, X_{r+1} \leq \infty,...,X_{p} \leq \infty)= \]
+\[ =F(x_{1},...,x_{r},\infty,...,\infty) \]
+y la \textbf{densidad marginal} de $X_{1},...,X_{r}$ es
+\[ \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x_{1},...,x_{r},u_{r+1},...,u_{p})du_{r+1} \dotsb du_{p} \]
+Los momentos conjuntos pueden obtenerse de la distribución marginal, por ejemplo:
+\[ \mathcal{E} X_{1}^{h_{1}} \dotsb X_{r}^{h_{r}} = \mathcal{E} X_{1}^{h_{1}} \dotsb X_{r}^{h_{r}} X_{r+1}^{0} \dotsb X_{p}^{0} = \int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} x_{1}^{h_{1}} \dotsb x_{r}^{h_{r}} f(x_{1},...,x_{p})dx_{1} \dotsb dx_{p}= \]
+\[ = \int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} x_{1}^{h_{1}} \dotsb x_{r}^{h_{r}} · \left[ \int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} f(x_{1},...,x_{p})dx_{r+1} \dotsb dx_{p} \right] dx_{1} \dotsb dx_{r} \]
+Si la función de distribución de $X_{1},...,X_{p}$ es $F(x_{1},...,x_{p})$, el conjunto de variables aleatorias se dice que es \textbf{mutuamente independientes} si
+\[ F(x_{1},...,x_{p})=F_{1}(x_{1}) \dotsb F_{p}(x_{p}) \textnormal{,} \]
+donde $F_{i}(x_{i})$ es la función de distribución marginal de $X_{i}$, i=1,...,p. El conjunto $X_{1},...,X_{r}$ se dice que es \textbf{independiente} de $X_{r+1},...,X_{p}$ si
+\[ F(x_{1},...,x_{p})=F(x_{1},...,x_{r},\infty,...,\infty) F(\infty,...,\infty, x_{r+1},...,x_{p}) \textnormal{.}\]
+Un resultado de la independencia es que los momentos conjuntos se multiplican. Por ejemplo, si tenemos que $X_{1},...,X_{p}$ son mutamente independientes, entonces
+\[ \mathcal{E} X_{1}^{h_{1}} \dotsb X_{p}^{h_{p}} = \int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} x_{1}^{h_{1}} \dotsb x_{p}^{h_{p}} f(x_{1},...,x_{p})dx_{1} \dotsb dx_{p}= \]
+\[ = \prod_{i=1}^{p} \int_{-\infty}^{\infty} x_{i}^{h_{i}} f_{i}(x_{i}) dx_{i} = \prod_{i=1}^{p} \lbrace \mathcal{E} X_{i}^{h_{i}} \rbrace \]
+Si la función de distribución de $X_{1},...,X_{p}$ es $F(x_{1},...,x_{p})$, la densidad condicional de $X_{1},...,X_{r}$ dados $X_{r+1}=x_{r+1},...,X_{p}=x_{p}$, es
+\[ \frac{f(x_{1},...,x_{p})}{\int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} f(u_{1},...,r_{r},x_{r+1},...,x_{p})du_{1} \dotsb du_{r}} \]
+Por último, vamos a hablar de la transformación de variables.\\
+Sea $F(x_{1},...,x_{p})$ la función de densidad de $X_{1},...,X_{p}$. Consideramos las $p$ funciones reales $y_{i}=y_{i}(x_{1},...,x_{p})$ con $i=1,...,p$.\\
+Asumimos que la transformación del espacio de x al de y es una a una; la transformación inversa es $x_{i}=x_{i}(y_{1},...,y_{p})$ con $i=1,...,p$.
+Sean las variables aleatorias $Y_{1},...,Y_{p}$ definidas como $Y_{i}=y_{i}(X_{1},...,X_{p})$ con $i=1,...,p$. La función de densidad de $Y_{1},...,Y_{p}$ es
+\[ g(y_{1},...,y_{p})=f[x_{1}(y_{1},...,y_{p}),...,x_{p}(y_{1},...,y_{p})]J(y_{1},...,y_{p´}), \]
+donde $J(y_{1},...,y_{p})$ es el Jacobiano
+\begin{equation}
+		\renewcommand\arraystretch{2}
+        J(y_{1},...,y_{p}) = mod \begin{vmatrix}
+            \frac{\partial x_{1}}{\partial y_{1}} & \frac{\partial x_{1}}{\partial y_{2}} & \cdots & \frac{\partial x_{1}}{\partial y_{p}} \\
+            \frac{\partial x_{2}}{\partial y_{1}} &\frac{\partial x_{2}}{\partial y_{2}} & \cdots & \frac{\partial x_{2}}{\partial y_{p}} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            \frac{\partial x_{p}}{\partial y_{1}} & \frac{\partial x_{p}}{\partial y_{2}} & \cdots & \frac{\partial x_{p}}{\partial y_{p}} \\
+        \end{vmatrix}
+    \end{equation}
+Donde asumimos que la derivada existe y donde 'mod' se refiere al módulo del determinante. \cite{anderson1958introduction} \\
+
+\section{Propiedades de matrices definidas positivas}
+La forma cuadrática de una matriz la definimos como 
+\[x^TAx=\sum_{i,j=1}^p a_{ij}x_ix_j, \]
+donde $x^T$ es el vector $(x_1,...,x_p)$ y $A=(a_{ij})$ es una matriz simétrica. Se dice que $A$ y la forma cuadrática son \textbf{semidefinidas positivas} si $x^TAx \geq 0$ para todo $x$. Si $x^TAx > 0$ para todo $x \neq 0$ entonces $A$ y la forma cuadrática se llaman \textbf{definidas positivas} que implica que la matriz es simétrica.
+\begin{teorema}\label{teo1}
+Si $C$ es una matriz cuadrada de $p$ filas y columnas definida positiva, y si $B$ una matriz con $p$ filas y $q$ columnas, $q \leq p$, es de rango $q$, entonces $B^TCB$ es definida positiva
+\end{teorema}
+\begin{proof}
+Dado un vector $y\neq0$, sea $x=BY$. Como $B$ es de rango $q$, $By=x\neq 0$. Entonces
+\[ y^T(B^TCB)y=(By)^TC(By)=x^TCx>0 \]
+y la prueba concluye observando que  $B^TCB$ es simétrica. Notar que sólo se cumple cuando $B$ es de rango $q$ pues en otro caso, existiría $y \neq 0$ tal que $By=0$. \cite{anderson1958introduction}
+\end{proof}
+La última afirmación de la demostración anterior nos lleva al siguiente corolario:
+\begin{corolario}
+Si $C$ es definida positiva y $B$ es no singular, entonces $B^TCB$ es definida positiva.
+\end{corolario}
+\begin{corolario}
+Si $C$ es definida positiva entonces $C^{-1}$ es definida positiva.
+\end{corolario}
+\begin{proof}
+$C$ debe ser no singular. Si fuera singular, ocurriría que $Cx=0$ para algún $x \neq 0$, entonces $x^TCx=0$ lo que contradice la hipótesis de que $c$ es definida positiva. Sea $B$ en \autoref{teo1} igual a $C^{-1}$. Entonces $B^TCB=(C^{-1})^TCC^{-1}=(C^{-1})^T$. Trasponiendo $CC^{-1}=I$, tenemos que $(C^{-1})^TC^T=(C^{-1})^TC=I$. Por lo que $C^{-1}=(C^{-1})^T$.
+\end{proof}
+
+\begin{corolario}
+La matriz $q \times q$ formada por la eliminación de $p-q$ filas de una matriz definida positiva $C$ y las correspondientes $p-q$ columnas de $C$ es definida positiva.
+\end{corolario}
+\begin{proof}
+Se deduce del \autoref{teo1} formando $B$ a través de coger la identidad $p \times p$ y borrando las columnas correspondientes a las borradas de $C$.
+\end{proof}
+
+\begin{teorema}\label{teo2}
+Si $A$ es no singular, existe una matriz triangular inferior no singular $F$ tal que $FA=A^*$ es una matriz triangular superior no singular.
+\end{teorema}
+\begin{proof}
+Sea $A=A_1$. Se define recursivamente $A_G=(a_{ij}^{(g)})=F_{g-1}A_{g-1},g=2,...,p$, donde $F_{g-1}=(f_{ij}^{(g-1)})$ tiene los elementos
+\[ f_{jj}^{(g-1)}=1,\textnormal{   } j=1,...,p, \]
+\[ f_{i,g-1}^{(g-1)} = \frac{a_{i,g-1}^{(g-1)} }{a_{g-1,g-1}^{(g-1)}}, \textnormal{   } i=g,...,p \]
+\[ f_{ij}^{(g-1)}=0, \textnormal{en otro caso} \]
+Entonces
+\[ a_{ij}^{(g)}=0, \textnormal{     } i=j+1,...,p, j=1,...,g-1, \]
+\[ a_{ij}^{(g)}=a_{ij}^{(g-1)}, \textnormal{     } i=1,...,g-1, j=1,...,p, \]
+\[ a_{ij}^{(g)}=a_{ij}^{(g-1)} + f_{i,g-1}^{(g-1)} a_{g-1,j}^{(g-1)}=a_{ij}^{(g-1)} - \frac{a_{i,g-1}^{(g-1)} a_{g-1,j}^{(g-1)}}{a_{g-1,g-1}^{(g-1)}}, i,j=g,...,p. \]
+Y vemos que $F=F_{p-1},...,F_1$ es triangular inferior y los elementos de $A_g$ en las primeras $g-1$ columnas bajo la diagonal son $0$; en particular, $A^*=FA$ es triangular superior. De $\vert A \vert \neq 0$ y $\vert F_{g-1} \vert=1$, tenemos que $\vert A_{g-1} \vert \neq 0$. Por tanto, $a_{11}^{(1)},...,a_{g-2,g-2}^{(g-2)}$ son diferentews de $0$ y las últimas $p-g$ columnas de $A_{g-1}$ pueden ser numeradas para que $a_{g-1,g-1}^{(g-1)} \neq 0$; entonces $f_{i,g-1}^{(g-1)}$ está bien definida.
+\end{proof}
+La ecuación $FA=A^*$ puede ser resuelta para obtener $A=LR$, donde $R=A^*$ es triangular superior y $L=F^{-1}$ es triangular inferior y tiene $1$ en la diagonal principal (puesto que $F$ también los tiene). Esto se conoce como la \textit{descomposición LR}.
+\begin{corolario}
+Si $A$ es definida positiva, existe una matriz triangular inferior no singurar $F$ tal que $FAF^T$ es diagonal y positiva definida.
+\end{corolario}
+\begin{proof}
+Del \autoref{teo2}, esiste una triangular inferior no singular $F$ tal que $FA$ es tiangular superior y no singular, entonces, $FAF^T$ es triangular superior y simétrica y por lo tanto, diagonal.
+\end{proof}
+\begin{corolario}
+El determinante de una matriz definida positiva $A$ es positivo.
+\end{corolario}
+\begin{proof}
+De la construcción de $FAF^T$,
+\begin{equation}
+FAF^T=\begin{pmatrix}
+a_{11}^{(1)} & 0 & \cdots & 0\\
+0 & a_{22}^{(2)} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{pp}^{(p)}
+\end{pmatrix}
+\end{equation} 
+\end{proof}
+es definida positiva y por tanto $a_{gg}^{(g)}>0, g=1,...,p$, y $0 < \vert FAF^T \vert = \vert F \vert \vert A \vert \vert F \vert = \vert A \vert$.
+\begin{corolario}\label{col6}
+Si $A$ es definida positiva, existe una matriz triangular inferior $G$ tal que $GAG^T=I$
+\end{corolario}
+\begin{proof}
+Sea $FAF^T=D^2$, y sea $D$ la matriz diagonal cuyos elementos de la diagonal son las raíces cuadradas positivas de los elementos de la diagonal de $D^2$. Entonces tomando $C=D^{-1}F$ se termina la prueba.
+\end{proof}
+\begin{corolario}
+\textbf{Descomposición de Cholsky.} Si $A$ es definida positiva, existe una matriz triangular superior única $T$ $(t_{ij}=0, i<j)$ con elementos positivos en la diagonal tal que $A=TT^T$
+\end{corolario}
+\begin{proof}
+Del \autoref{col6}, $A=G^{-1}(G^{T})^{-1}$, donde $G$ es triangular inferior. Entonces $T=G^{-1}$ es triangular inferior. \cite{anderson1958introduction}
+\end{proof}
+\section{Distribución normal multivariante}
+La función de densidad univariante puede escribirse como
+\[ ke^{-\frac{1}{2}\alpha(x-\beta)^{2}}=ke^{-\frac{1}{2}(x-\beta)\alpha(x-\beta)} \]
+donde $\alpha$ es positivo y $k$ es elegida de forma que la función de distribución integrada el todo el eje x sea la unidad. La función de densidad de una distribución normal de $X_{1},...,X_{p}$ tiene una forma análoga. La variable escalar $x$ es sutituida por un vector $x=(x_{1},...,x_{p})^{T}$, el escalar $\beta$ por un vector $b=(b_{1},...,b_p)^T$ y la constante positiva $\alpha$ por una matriz definida positiva (simétrica)
+\begin{equation}
+A=\begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1p}\\
+a_{21} & a_{22} & \cdots & a_{2p}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{p1} & a_{p2} & \cdots & a_{pp}
+\end{pmatrix}
+\end{equation} 
+El cuadrado $\alpha(x-\beta)^2=(x-\beta)\alpha(x-\beta)$ es reemplazado por la forma cuadrática
+\[ (x-b)^T A (x-b) = \sum_{i,j=1}^{p}a_{ij}(x_i-b_i)(x_j-b_j). \]
+Por tanto, la función de densidad de una normal p-variante es
+\[ f(x_1,...,x_p)=Ke^{-\frac{1}{2}(x-b)^T A (x-b)} ,\]
+donde $K>0$ es elegida de forma que la integral sobre al espacio euclídeo $p$-dimensional de $x_1,...,x_p$ sea la unidad. Vamos a determinar esa K, evaluando
+\[ K^* = \int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} e^{-\frac{1}{2}(x-b)^T A (x-b)} dx_p \dotsb dx_1 \]
+Para ello, vamos a usar el \autoref{col6} que dice que si $A$ es definida positiva, existe una matriz no singular $C$ tal que $C^TAC=I$, donde $I$ denota la identidad y $C^T$ la traspuesta de $C$.\\
+Sea $x-b=Cy$ donde $y=(y_1,...,y_p)^T$, entonces $(x-b)^TA(x-b)=y^TC^TACy=y^Ty$. El jacobiano de la transformación es $J=mod \vert C \vert$. Por tanto, $K^*$ se vuelve:
+\[ K^*=mod \vert C \vert \int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} e^{-\frac{1}{2}y^Ty} dy_p,...,dy_1. \]
+Tenemos que
+\[ e^{-\frac{1}{2}y^Ty}=exp \left( -\frac{1}{2} \sum_{i=1}^p y_i^2 \right) = \prod_{i=1}^p e^{-\frac{1}{2}y_i^2},\]
+y así podemos escribir $K^*$ como:
+\[ K^*=mod \vert C \vert \int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} e^{-\frac{1}{2}y_1^2} \dotsb e^{-\frac{1}{2}y_p^2} dy_p,...,dy_1 = mod \vert C \vert \prod_{i=1}^p \lbrace \int_{-\infty}^{\infty} e^{-\frac{1}{2}y_i^2} dy_i \rbrace= \]
+\[ = mod \vert C \vert \prod_{i=1}^p \lbrace \sqrt{2 \pi} \rbrace= mod \vert C \vert (2 \pi)^{\frac{1}{2}p} \]
+en virtud de que
+\[ \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{\frac{1}{2}t^2}dt=1 \]
+Y tomamos el determinante de las matrices deducidas del \autoref{col6} $\vert C^T \vert \vert A \vert \vert C \vert = \vert I \vert$ y como $\vert C \vert= \vert C \vert $ y $\vert I \vert=1$, deducimos que $mod \vert C \vert = \frac{1}{\sqrt{\vert A \vert}}$.\\
+Por lo tanto, $K=\frac{1}{K^*}=\sqrt{\vert A \vert} (2\pi)^{-\frac{1}{2}p}$.\\
+La función de densidad normal es
+\[ \frac{\sqrt{\vert A \vert}}{(2 \pi)^{\frac{1}{2}p}} e^{-\frac{1}{2} (x-b)^T A (x-b)}. \]
+\cite{anderson1958introduction}\\\\
+Vamos a definir ahora de forma general el concepto de matriz aleatoria y el vector aleatorio será un caso especial de la matriz aleatoria con una sola columna.
+\begin{definicion}
+Una \textbf{matriz aleatoria} $Z$ es una matriz $Z=(Z_{gh})$, $g=1,...,m$, $h=1,...,n$, de variables aleatorias $Z_{11},...,Z_{mn}$.
+\end{definicion}
+Si las variables aleatorias $Z_{11},...,Z_{mn}$ pueden tomar solo un finito número de valores, la matriz aleatoria $Z$ puede ser una de las finitas matrices, $Z(1),...,Z(q)$. Si la probabilidad de $Z=Z(i)$ es $p_i$, entonces definiríamos $\mathcal{E}Z$ como $\sum_{i=1}^q Z(i)p_i$. Entonces $\mathcal{E}Z=(\mathcal{E}Z_{gh})$.Si las variables aleatorias $Z_{11},...,Z_{mn}$ tienen densidad conjunta, entonces operando con las sumas de Riemann podemos definir $\mathcal{E}Z$ como el límite (si existe) de aproximar las sumas del tipo que ocurren en el caso discreto, de nuevo, $\mathcal{E}Z=(\mathcal{E}Z_{gh})$. Por lo tanto, en general, usamos la siguiente definición:
+
+\begin{definicion}
+La \textbf{esperanza de una matriz aleatoria} $Z$ es $\mathcal{E}Z=(\mathcal{E}Z_{gh})$, $g=1,...,m$, $h=1,...,n$.
+\end{definicion}
+En particular, si $Z$ es un vector aleatorio $X$, la esperanza $\mathcal{E}X=(\mathcal{E}X_1,...,\mathcal{E}X_p)^T$ es la media o el vector media de $X$ que denotamos como $\mu$. Si $Z$ es $(X-\mu)(X-\mu)^T$, la esperanza es
+\[ \mathcal{C}(X)=\mathcal{E}(X-\mu)(X-\mu)^T = [ \mathcal{E}(X_i-\mu_i)(X_j-\mu_j) ] \]
+la \textbf{matriz de covarianzas} de $X$, donde el i-ésimo elemento de la diagonal, $\mathcal{E}(X_i-\mu_i)^2$, es la varianza de $X_i$ y el elemento i,j-ésimo fuera de la diagonal, $\mathcal{E}(X_i-\mu_i)(X_j-\mu_j)$, es la covarianza de $X_i$ y $X_j$ con $i \neq j$. Denotamos esta matriz por $\Sigma$. Notar que:
+\[ \mathcal{C}(X)=\mathcal{E}(XX^T-\mu X^T - X\mu^T + \mu\mu^T) = \mathcal{E}XX^T - \mu\mu^T . \]
+La esperanza de una matriz o vector aleatorio cumple ciertas propiedades que podemos resumir en los siguientes lemas:
+\begin{lema}\label{lem1}
+Si $Z$ es una matriz aleatoria $m \times n$, $D$ es una matriz real $l \times m$, $E$ una matriz real $n \times q$ y $F$ otra matriz real $l \times q$, entonces
+\[ \mathcal{E}(DZE+F)=D(\mathcal{E}E)+F. \]
+\end{lema}
+\begin{proof}
+El elemento de la i-ésima fila y la j-ésima columna de $\mathcal{E}(DZE+F)$ es 
+\[ \mathcal{E} \left( \sum_{h,g} d_{ih}Z_{hg}e_{gj}+f_{ij} \right) = \sum_{h,g} d_{ih}(\mathcal{E}Z_{hg})e_{gj} + f_{ij}, \]
+que es el elemento i,j-ésimo de $D(\mathcal{E}Z)E+F$.
+\end{proof}
+\begin{lema}\label{lem2}
+Si $Y=DX+f$, donde $X$ es un vector aleatorio, entonces:
+\[ \mathcal{E}Y=D \mathcal{E}X+f, \]
+\[ \mathcal{C}(Y)=D\mathcal{C}(X)D^T. \]
+\end{lema}
+\begin{proof}
+La primera propiedad se deduce de forma directa del \autoref{lem1}.\\
+Para la segunda,
+\[ \mathcal{C}(Y)=\mathcal{E}(Y-\mathcal{E}Y)(Y-\mathcal{E}Y)^T \]
+\[ =\mathcal{E}[DX+f-(D\mathcal{E}X+f)][DX+f-(D\mathcal{E}X+f)]^T \]
+\[ =\mathcal{E}[D(X-\mathcal{E}X)][D(X-\mathcal{E}X)]^T=\mathcal{E}[D(X-\mathcal{E}X)(X-\mathcal{E}X)^TD^T] \]
+que lleva a la segunda propiedad por el \autoref{lem1}.
+\end{proof}
+Cuando la transformación corresponde a una normal, $X=CY+b$, entonces $\mathcal{E}X=C\mathcal{E}Y+b$. Por las transformaciones vistas con anterioridad, la función de densidad de $Y$ es proporcional a:
+\[ \frac{1}{(2\pi)^\frac{1}{2}p}e^{-\frac{1}{2}yy^T}=\prod_{j=1}^p \lbrace  \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}y_j^2} \rbrace. \]
+La esperanza de la componente i-ésima de $Y$ es
+\[ \mathcal{E}Y_i=\int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} y_i \prod_{j=1}^p \lbrace  \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}y_j^2} \rbrace dy_1 \dotsb dy_p \]
+\[ = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} y_ie^{-\frac{1}{2}y_i^2}dy_i \prod^p_{j=1,j\neq i} \lbrace \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}y_j^2} dy_j \rbrace \]
+\[ = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} y_ie^{-\frac{1}{2}y_i^2} dy_i=0 \]
+donde la última igualdad sigue de que $y_i e^{-\frac{1}{2}y_i^2}$ es una función impar de $y_i$. También puede deducirse de que es la esperanza de una normal con media $0$. Por tanto, $\mathcal{E}Y=0$ y la media de $X$, denotada por $\mu$, es $\mu=\mathcal{E}X=b$.\\
+De la segunda propiedad del \autoref{lem2}, podemos ver que $\mathcal{C}(X)=C(\mathcal{E}YY^T)C^T$. El elemento i,j-ésimo de $\mathcal{E}YY^T$ es
+\[ \mathcal{E}YY^T= \int_{-\infty}^{\infty} \dotsb \int_{-\infty}^{\infty} y_i y_j \prod_{h=1}^p \lbrace  \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}y_h^2} \rbrace dy_1 \dotsb dy_p  .\]
+Si $i=j$ tenemos que 
+
+\[ \mathcal{E}Y^2= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} y_i^2 e^{-\frac{1}{2}y_i^2} dy_i \prod_{h=1,h\neq i}^p \lbrace  \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}y_h^2} y_h \rbrace \]
+
+\[ = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} y_i^2 e^{-\frac{1}{2}y_i^2} dy_i = 1 \]
+
+La última igualdad se deduce de que la expresión antes de la final es la esperanza del cuadrado de una variable con ditribución normal de media $0$ y varianza $1$. Si $i\neq j$ la expresión se convierte en
+\[ \mathcal{E}Y_iY_j= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} y_ie^{-\frac{1}{2}y_i^2} dy_i \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} y_je^{-\frac{1}{2}y_j^2} dy_j \prod_{h=1,h\neq i,j}^p \lbrace \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-\frac{1}{2}y_h^2} y_h \rbrace = 0\]
+ya que la primera integral da $0$. Podemos resumir los dos casos como $\mathcal{E}YY^T=I$. Y por lo tanto
+\[ \mathcal{E}(X-\mu)(X-\mu)^T=CIC^T=CC^T. \]
+Por el \autoref{col6} obtenemos que $A=(C^T)^{-1}C^{-1}$ multiplicando $(C^T)^{-1}$ en la parte izquierda y $C^{-1}$ en la derecha. Tomando inversas en ambos lados de la igualdad nos da $CC^T=A^{-1}$.\\
+Por lo tanto, la matriz de covarianzas de $X$ es
+\[ \Sigma=\mathcal{E}(X-\mu)(X-\mu)^T=A^{-1}. \]
+y se deduce que es definida poritiva. Resumimos los resultados en el siguiente teorema.
+\begin{teorema}
+Si la función de densidad de un vector aleatorio $X$ es la de una normal, entonces la esperanza de $X$ es $b$ y la matriz de covarianzas es $A^{-1}$. De forma inversa, dados un vector $\mu$ y una matriz definida positiva $\Sigma$, hay una función de densidad norma multivariante 
+\[ (2\pi)^{-\frac{1}{2}p} \vert \Sigma \vert^{-\frac{1}{2}}e^{-\frac{1}{2}(x-\mu)^T \Sigma^{-1} (x-\mu)} \]
+tales que la esperanza del vector con esta función de densidad es $\mu$ y la matriz de covarianzas es $\Sigma$.
+\end{teorema}
+Denotamos a la función de densidad anterior como $n(x \vert \mu, \Sigma)$ y a la distribución, $N(\mu, \Sigma)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput
+%------------------------------------------------------------------------------------
+% FIN DEL CAPÍTULO. 
+%------------------------------------------------------------------------------------

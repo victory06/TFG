@@ -1,0 +1,65 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{\nonumberline \'{I}ndice de figuras}{\es@scroman {ix}}{chapter*.5}%
+\contentsline {chapter}{\nonumberline \'{I}ndice de tablas}{\es@scroman {x}}{chapter*.7}%
+\contentsline {chapter}{\nonumberline Agradecimientos}{\es@scroman {xi}}{chapter*.8}%
+\babel@toc {english}{}
+\contentsline {chapter}{\nonumberline Summary}{\es@scroman {xiii}}{chapter*.9}%
+\babel@toc {spanish}{}
+\contentsline {chapter}{\nonumberline Introducción}{\es@scroman {xiv}}{chapter*.10}%
+\contentsline {section}{\numberline {1}Objetivos}{\es@scroman {xv}}{section.0.1}%
+\contentsline {chapter}{\numberline {1}Inferencia estadística y estadística empleada}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Espacios muestrales y probabilidad básica}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Variables aleatorias}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Estimadores máximo verosímiles}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Desigualdad de Chebyshev}{7}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Estadística Multivariante empleada}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Primeras nociones}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Propiedades de matrices definidas positivas}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Distribución normal multivariante}{12}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Aprendizaje automático}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Nociones previas}{16}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Esquema básico de aprendizaje}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Errores}{17}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Generalización de errores I}{18}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Generalización de errores II}{19}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Compromiso Sesgo-Varianza}{25}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Sobreajuste y regularización}{26}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Descripción de los modelos utilizados}{27}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}k-Nearest Neighbors}{27}{subsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.1}Métrica}{28}{subsubsection.3.4.1.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.2}Votación}{28}{subsubsection.3.4.1.2}%
+\contentsline {subsection}{\numberline {3.4.2}Regresión Logística}{29}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Árboles de decisión}{33}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Bosques aleatorios}{34}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Potenciación del gradiente}{35}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Máquinas de soporte vectorial}{35}{subsection.3.4.6}%
+\contentsline {section}{\numberline {3.5}Métricas}{42}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Accuracy}{42}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Matriz de confusión}{42}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Precisión}{43}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Sensibilidad}{44}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Métrica $F_1$}{44}{subsection.3.5.5}%
+\contentsline {chapter}{\numberline {4}Conjunto de datos}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Conceptos genéticos relevantes}{45}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Materiales}{46}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Conjunto de datos completo}{47}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Conjunto de datos estudiado}{48}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Implementación}{49}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Paquetes utilizados}{49}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Exploración de los datos}{50}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Conjunto de datos de tríos y primer control}{50}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Segundo conjunto de control}{52}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Ambos datos de controles}{52}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Preprocesado de datos y selección de variables}{53}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Modelos empleados y sus parámetros}{54}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Modelo K-NN}{54}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Regresión Logística}{54}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Árboles de decisión}{55}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Máquinas de soporte vectorial}{55}{subsection.5.4.4}%
+\contentsline {chapter}{\numberline {6}Resultados finales y conclusiones}{56}{chapter.6}%
+\contentsline {section}{\numberline {6.1}K Nearest Neighbours}{56}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Regresión Logística}{57}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Conclusiones y trabajo futuro}{60}{chapter.7}%
+\contentsline {chapter}{\numberline {A}Primer apéndice}{61}{appendix.Alph1}%
+\contentsline {chapter}{Glosario}{62}{chapter*.11}%
+\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{63}{chapter*.12}%

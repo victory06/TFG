@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: libro.aux
+The style file: apalike.bst
+Database file #1: library.bib
+Warning--entry type for "VCboundRNowak" isn't style-file defined
+--line 87 of file library.bib
+Warning--entry type for "microarray" isn't style-file defined
+--line 95 of file library.bib
+Warning--entry type for "scikit2021knn" isn't style-file defined
+--line 111 of file library.bib
+Warning--entry type for "scikit2021lr" isn't style-file defined
+--line 119 of file library.bib
+Warning--entry type for "scikit2021rf" isn't style-file defined
+--line 135 of file library.bib
+Warning--entry type for "scikit2021gb" isn't style-file defined
+--line 143 of file library.bib
+Warning--entry type for "scikit2021dt" isn't style-file defined
+--line 151 of file library.bib
+Warning--entry type for "scikit2021metrics" isn't style-file defined
+--line 159 of file library.bib
+Warning--empty booktitle in inproceedings
+You've used 32 entries,
+            1935 wiz_defined-function locations,
+            636 strings with 8141 characters,
+and the built_in function-call counts, 11780 in all, are:
+= -- 1123
+> -- 533
+< -- 26
++ -- 191
+- -- 180
+* -- 967
+:= -- 2115
+add.period$ -- 88
+call.type$ -- 32
+change.case$ -- 238
+chr.to.int$ -- 27
+cite$ -- 33
+duplicate$ -- 441
+empty$ -- 777
+format.name$ -- 222
+if$ -- 2259
+int.to.chr$ -- 6
+int.to.str$ -- 0
+missing$ -- 31
+newline$ -- 155
+num.names$ -- 98
+pop$ -- 223
+preamble$ -- 1
+purify$ -- 246
+quote$ -- 0
+skip$ -- 349
+stack$ -- 0
+substring$ -- 713
+swap$ -- 47
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 176
+warning$ -- 1
+while$ -- 91
+width$ -- 0
+write$ -- 386
+(There were 9 warnings)

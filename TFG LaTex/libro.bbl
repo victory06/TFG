@@ -1,0 +1,169 @@
+\begin{thebibliography}{}
+
+\bibitem[Abu-Mostafa et~al., 2012]{abu2012learning}
+Abu-Mostafa, Y.~S., Magdon-Ismail, M., and Lin, H.-T. (2012).
+\newblock {\em Learning from data}, volume~4.
+\newblock AMLBook New York, NY, USA:.
+
+\bibitem[Anderson et~al., 1958]{anderson1958introduction}
+Anderson, T.~W., Anderson, T.~W., Anderson, T.~W., and Anderson, T.~W. (1958).
+\newblock {\em An introduction to multivariate statistical analysis}, volume~2.
+\newblock Wiley New York.
+
+\bibitem[Biau, 2012]{biau2012analysis}
+Biau, G. (2012).
+\newblock Analysis of a random forests model.
+\newblock {\em The Journal of Machine Learning Research}, 13(1):1063--1095.
+
+\bibitem[Chomboon et~al., 2015]{inproceedings}
+Chomboon, K., Chujai, P., Teerarassammee, P., Kerdprasop, K., and Kerdprasop,
+  N. (2015).
+\newblock An empirical study of distance metrics for k-nearest neighbor
+  algorithm.
+\newblock pages 280--285.
+
+\bibitem[Cogill and Wang, 2016]{10.1093/bioinformatics/btw498}
+Cogill, S. and Wang, L. (2016).
+\newblock {Support vector machine model of developmental brain gene expression
+  data for prioritization of Autism risk gene candidates}.
+\newblock {\em Bioinformatics}, 32(23):3611--3618.
+
+\bibitem[Cortes and Vapnik, 1995]{cortes1995support}
+Cortes, C. and Vapnik, V. (1995).
+\newblock Support-vector networks.
+\newblock {\em Machine learning}, 20(3):273--297.
+
+\bibitem[Cunningham and Delany, 2007]{padraiddelany2007k}
+Cunningham, P. and Delany, S. (2007).
+\newblock k-nearest neighbour classifiers.
+\newblock {\em Mult Classif Syst}.
+
+\bibitem[Estudiantes, 2012]{microarray}
+Estudiantes (2012).
+\newblock {ADN/ARN Microarrays}.
+
+\bibitem[Forsyth, 2018]{forsyth2018probability}
+Forsyth, D. (2018).
+\newblock {\em Probability and statistics for computer science}.
+\newblock Springer.
+
+\bibitem[Garthwaite et~al., 2002]{garthwaite2002statistical}
+Garthwaite, P.~H., Jolliffe, I.~T., Jolliffe, I., and Jones, B. (2002).
+\newblock {\em Statistical inference}.
+\newblock Oxford University Press on Demand.
+
+\bibitem[Goodfellow et~al., 2016]{Goodfellow-et-al-2016}
+Goodfellow, I., Bengio, Y., and Courville, A. (2016).
+\newblock {\em Deep Learning}.
+\newblock MIT Press.
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem[Hans, 2009]{hans2009bayesian}
+Hans, C. (2009).
+\newblock Bayesian lasso regression.
+\newblock {\em Biometrika}, 96(4):835--845.
+
+\bibitem[Hunter, 2007]{Hunter:2007}
+Hunter, J.~D. (2007).
+\newblock Matplotlib: A 2d graphics environment.
+\newblock {\em Computing in Science \& Engineering}, 9(3):90--95.
+
+\bibitem[Hyde et~al., 2019]{hyde2019applications}
+Hyde, K.~K., Novack, M.~N., LaHaye, N., Parlett-Pelleriti, C., Anden, R.,
+  Dixon, D.~R., and Linstead, E. (2019).
+\newblock Applications of supervised machine learning in autism spectrum
+  disorder research: a review.
+\newblock {\em Review Journal of Autism and Developmental Disorders},
+  6(2):128--146.
+
+\bibitem[Jones et~al., 01  ]{scipy}
+Jones, E., Oliphant, T., Peterson, P., et~al. (2001--).
+\newblock {SciPy}: Open source scientific tools for {Python}.
+
+\bibitem[Jordan and Mitchell, 2015]{jordan2015machine}
+Jordan, M.~I. and Mitchell, T.~M. (2015).
+\newblock Machine learning: Trends, perspectives, and prospects.
+\newblock {\em Science}, 349(6245):255--260.
+
+\bibitem[M{\"u}ller et~al., 2016]{muller2016introduction}
+M{\"u}ller, A.~C., Guido, S., et~al. (2016).
+\newblock {\em Introduction to machine learning with Python: a guide for data
+  scientists}.
+\newblock " O'Reilly Media, Inc.".
+
+\bibitem[Nilsson, 2009]{nilsson2009quest}
+Nilsson, N.~J. (2009).
+\newblock {\em The quest for artificial intelligence}.
+\newblock Cambridge University Press.
+
+\bibitem[Nowak, 2009]{VCboundRNowak}
+Nowak, R. (2009).
+\newblock {Lecture 19: The Proof of the Vapnik-Chervonenkis (VC) Inequality}.
+
+\bibitem[Pedregosa et~al., 2011]{scikit-learn}
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel,
+  O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J.,
+  Passos, A., Cournapeau, D., Brucher, M., Perrot, M., and Duchesnay, E.
+  (2011).
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830.
+
+\bibitem[Peterson, 2009]{peterson2009k}
+Peterson, L.~E. (2009).
+\newblock K-nearest neighbor.
+\newblock {\em Scholarpedia}, 4(2):1883.
+
+\bibitem[Scikit-Learn, 2021a]{scikit2021dt}
+Scikit-Learn (2021a).
+\newblock {Decision Tree Classifier}.
+
+\bibitem[Scikit-Learn, 2021b]{scikit2021gb}
+Scikit-Learn (2021b).
+\newblock {Gradient Boosting Classifier}.
+
+\bibitem[Scikit-Learn, 2021c]{scikit2021knn}
+Scikit-Learn (2021c).
+\newblock {K Nearest Neighbors Classifier Python Implementation}.
+
+\bibitem[Scikit-Learn, 2021d]{scikit2021lr}
+Scikit-Learn (2021d).
+\newblock {Logistic Regression Classifier}.
+
+\bibitem[Scikit-Learn, 2021e]{scikit2021metrics}
+Scikit-Learn (2021e).
+\newblock {Metrics}.
+
+\bibitem[Scikit-Learn, 2021f]{scikit2021rf}
+Scikit-Learn (2021f).
+\newblock {Random Forest Classifier}.
+
+\bibitem[Su et~al., 2007]{su2007single}
+Su, S.-C., Kuo, C.-C.~J., and Chen, T. (2007).
+\newblock Single nucleotide polymorphism data analysis-state-of-the-art review
+  on this emerging field from a signal processing viewpoint.
+\newblock {\em IEEE Signal Processing Magazine}, 24(1):75--82.
+
+\bibitem[Szatmari et~al., 2007]{szatmari2007mapping}
+Szatmari, P., Paterson, A., Zwaigenbaum, L., Roberts, W., Brian, J., Liu,
+  X.-Q., Vincent, J., Skaug, J., Thompson, A., Senman, L., et~al. (2007).
+\newblock Mapping autism risk loci using genetic linkage and chromosomal
+  rearrangements.
+\newblock {\em Nature genetics}, 39(3):319.
+
+\bibitem[Timofeev, 2004]{timofeev2004classification}
+Timofeev, R. (2004).
+\newblock Classification and regression trees (cart) theory and applications.
+\newblock {\em Humboldt University, Berlin}, pages 1--40.
+
+\bibitem[Van~Rossum and Drake, 2009]{10.5555/1593511}
+Van~Rossum, G. and Drake, F.~L. (2009).
+\newblock {\em Python 3 Reference Manual}.
+\newblock CreateSpace, Scotts Valley, CA.
+
+\bibitem[{W}es {M}c{K}inney, 2010]{mckinney-proc-scipy-2010}
+{W}es {M}c{K}inney (2010).
+\newblock {D}ata {S}tructures for {S}tatistical {C}omputing in {P}ython.
+\newblock In {S}t\'efan van~der {W}alt and {J}arrod {M}illman, editors, {\em
+  {P}roceedings of the 9th {P}ython in {S}cience {C}onference}, pages 56 -- 61.
+
+\end{thebibliography}
